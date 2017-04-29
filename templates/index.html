@@ -1,33 +1,35 @@
-<!-- This uses the layout template file please read that to check which blocks are where
-but also keep in mind that the jinga sytax here is kind of self defineable -->
-{% extends "layout.html" %} 
 
-
-{% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-{% endblock %} 
+<html>
 
 
 
-{% block title %}    Reduce-Me   {% endblock %}
-
-
-
-
-{% block content %}
-<div class="holder">
-	<div class="upload-side">
-		<h1>Reduce-Me</h1>
-	</div>
-
-	<div class="preview"></div>
+<head>
+	<link rel="stylesheet" type="text/css" href="/static/home.css">
+ <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body style="background-color:#cd5360">
+ 
+  <div class="main">
+    <div class="_main-title">
+      <h3> Mankind. </h3>
+    </div>
+    <div class="_main-title_body">
+      <h2> Do Good Things. </h2>
+    </div>
+    <div class="button">
+    <div class="wrapper">
+  <div class="file-upload">
+    <input type="file" />
+    <i class="fa fa-arrow-up"></i>
+  </div>
 </div>
+    </div>
+  </div>
 
-{% endblock %}
+</body>
+    
+ 
 
 
-
-{% block footer %}
-
-{% endblock %}
+</html>
+    
