@@ -1,40 +1,33 @@
-.main {
- bottom: 0;
-height: 100px;
-margin: auto;
-left: 0;
-position: absolute;
-right: 0;
-top: 0;
-width: 200px;
-
- 
-
-  
+body {
+	margin-top: 0;
+	margin-bottom: 0;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
-
-
-._main-title {
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  font-size: 35px;
-  padding: 0 0 0 0; 
-
- 
+.body-left{
+    
+   text-align: center; 
+    
+    
 }
 
-._main-title_body {
-  text-align: center;
- font-family: 'Roboto', sans-serif;
-  font-size: 20px
-  padding-bottom:5px;
+.body-right {
+    
+  text-align: center;  
 
 }
-
-.button {
-  padding-left: 30px;
- 
+.left {
+	width: 50%;
+	height: 100vh;
+	float: left;
 }
-
+.right {
+	width: 50%;
+	height: 100vh;
+	float: right;
+	 OUTLINE: 1px solid black;
+}
 
