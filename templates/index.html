@@ -1,0 +1,33 @@
+<!-- This uses the layout template file please read that to check which blocks are where
+but also keep in mind that the jinga sytax here is kind of self defineable -->
+{% extends "layout.html" %} 
+
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+{% endblock %} 
+
+
+
+{% block title %}    Reduce-Me   {% endblock %}
+
+
+
+
+{% block content %}
+<div class="holder">
+	<div class="upload-side">
+		<h1>Reduce-Me</h1>
+	</div>
+
+	<div class="preview"></div>
+</div>
+
+{% endblock %}
+
+
+
+{% block footer %}
+
+{% endblock %}

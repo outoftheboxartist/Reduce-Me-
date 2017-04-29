@@ -1,0 +1,25 @@
+.upload-side {
+	width: 50%;
+	height: 100%;
+	background-color: #123456;
+	position: absolute;
+	float: left;
+}
+
+.preview {
+	width: 50%;
+	height: 100%;
+	background-color: green;
+	position: absolute;
+	float: left;
+}
+
+body {
+
+}
+
+
+.holder {
+	position: relative;
+	display: block;
+}
