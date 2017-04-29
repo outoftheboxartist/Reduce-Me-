@@ -1,5 +1,5 @@
 from flask import Flask, render_template as thing, redirect, request, url_for, abort, flash, session
-
+from ffmpy import FFmpeg as god
 app = Flask(__name__)
 
 
@@ -12,6 +12,9 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return thing('index.html')
+
+
+
 
 
 
