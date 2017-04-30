@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<!-- <html>
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="/static/home.css" rel="stylesheet" type="text/css">
+
     <link href="/static/dropzone.css" rel="stylesheet">
     
 	
@@ -20,7 +21,49 @@
             
             
             </div>
+
 	</div>
     </div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="/static/Javascript.js" type="text/javascript">
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="/static/home.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/static/davidzone.css">
+	
+	<title></title>
+</head>
+<body id="body">
+	<div class="container">
+		<div class="box1"><img alt="Cloud computing free icon" class="icon" height="224" src="https://image.flaticon.com/icons/svg/376/376924.svg" title="Cloud computing free icon" width="224"></div>
+		<div class="box2">
+			
+			<h2>Do Great Things.</h2>
+			<!-- <form action = "http://localhost:5000/upload" class="dropzone" method = "POST" 
+				         enctype = "multipart/form-data">
+				         <input type = "file" name = "file" /> <i class="fa fa-arrow-up"></i>
+				         <input type = "submit" onclick="$('#loading').show();"/>
+				      </form>
+			 -->
+			 
+			
+			 	Drop Here.
+			<form action="/target" action = "http://localhost:5000/upload" class="davidzone dropzone" method = "POST" id="mydropzone" ></form>
+			<button id="submit-all">Submit all files</button>
+							
+						
+
+		</div>
+	</div>
+<!-- <script type="text/javascript" href="/static/dropzone.js"></script> -->
+	
 </body>
 </html>

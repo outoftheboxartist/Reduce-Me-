@@ -26,6 +26,8 @@ def index():
 
 # @app.route('/uploader', methods = ['GET', 'POST'])
 # def upload_file():
+
+
 #     if request.method == 'POST':
 #         if 'file' not in request.files:
 #             flash('No file part')
@@ -48,8 +50,8 @@ def index():
 #          <input type=submit value=Upload>
 #     </form>
 #     '''
-    
-        
+
+
    # if request.method == 'POST':
    #    f = request.files['file']
    #    f.save(secure_filename(f.filename))
@@ -81,6 +83,18 @@ def upload():
 
 
 
+
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'],
+                               filename)
+
+
+
+@app.route('/compress/<filename>')
+def compress(filename):
+    return thing("compress.html", filename = filename)
+
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'],
@@ -91,9 +105,6 @@ def uploaded_file(filename):
 def compress(filename):
     return thing("compress.html", filename = filename)
 
-
-
-
 # For a given file, return whether it's an allowed type or not
 def allowed_file(filename):
     return '.' in filename and \
@@ -101,6 +112,10 @@ def allowed_file(filename):
 
 
 
+# For a given file, return whether it's an allowed type or not
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
 
 
 def videoReduce(input):
@@ -111,6 +126,11 @@ def videoReduce(input):
 
 
 
+def videoReduce(input):
+	box = god(inputs={input: None}, outputs={'output.mp4': '-f mp4'})
+	box.cmd
+	box.run
+	return 0
 
 
 
