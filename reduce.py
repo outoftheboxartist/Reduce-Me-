@@ -1,8 +1,10 @@
+
 from flask import Flask, render_template as thing, redirect, request, url_for, abort, flash, session, send_from_directory
 from ffmpy import FFmpeg as god
 from werkzeug import secure_filename
 import os
 import subprocess
+
 
 app = Flask(__name__)
 
@@ -106,6 +108,9 @@ def videoReduce(input):
     box.cmd
     box.run
     return 0
+
+
+
 
 
 
