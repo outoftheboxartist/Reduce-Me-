@@ -1,41 +1,23 @@
 body {
-	margin-top: 0;
-	margin-bottom: 0;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-    font-family: 'Open Sans', sans-serif;
-   background:  #fc6c85 ;
-    color: ghostwhite;
-  
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #ff6a5c;
 }
 
-
-.body-left{
-    
-   text-align: center; 
-   font-size: 1.2rem;
-    
+.box2{
+  color: white;
+   font-family: 'Open Sans', sans-serif;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
     
 }
 
-.body-right {
+.box1{
+   display: flex;
+    justify-content: center;
     
-  text-align: center;  
-
-}
-.left {
-	width: 50%;
-	height: 100vh;
-	float: left;
-}
-.right {
-	width: 50%;
-	height: 100vh;
-	float: right;
-	 OUTLINE: 1px solid white;
-}
-.button {
-  padding-left: 93px;  
     
 }
