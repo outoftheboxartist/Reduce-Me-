@@ -11,7 +11,7 @@ app.config['UPLOAD_FOLDER'] = 'video/'
 app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'mov', 'mp4,' , 'tf', 'wmv', 'avi', 'flv'])
 
 
-
+# os.chdir(os.path.join(app.config['UPLOAD_FOLDER']))
 
 
 
@@ -71,13 +71,23 @@ def upload():
         # Redirect the user to the uploaded_file route, which
         # will basicaly show on the browser the uploaded file
         print 'gotfile2222222222222222222222222222222222222222'
-        return redirect(url_for("compress", filename = filename))
+        return peggy(filename)
+        # return redirect(url_for("compress", filename = filename))
 
-    print 'got no file'
+    print 'Peggy Did not Run Son'
                                
 
+def peggy(filename):
+	output_name = changey(filename)
+	subprocess.call('ffmpeg -i '+str(filename)+' -b 1000000 '+output_name, cwd=os.path.join(app.config['UPLOAD_FOLDER']), shell=True)
+	return redirect(url_for("compress", filename=output_name))
+	# subprocess.call('ffmpeg -r 10 -i frame%03d.png -r ntsc '+str(out_movie), shell=True)
 
-
+def changey(filename):
+	file = str(filename)
+	splitter = file.split(".")
+	rs = splitter[0][::-1]+"."+splitter[1]
+	return rs
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
@@ -115,3 +125,5 @@ def videoReduce(input):
 
 if __name__ == '__main__':
  	app.run(debug=True, host='0.0.0.0')
+ 	
+ 	
