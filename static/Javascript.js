@@ -1,5 +1,6 @@
-(function(){
-    console.log('test');
+function setup (){
+    
+   createCanvas(200) 
     
     
-}());
+}
