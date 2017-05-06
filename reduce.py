@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template as thing, redirect, request, url_for, abort, flash, session, send_from_directory
+from flask import Flask, render_template as thing, redirect, request, url_for, abort, flash, session, send_from_directory, jsonify
 from werkzeug import secure_filename
 import os
 import subprocess
@@ -18,7 +18,43 @@ app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif
 def index():
     return thing('index.html')
 
+# Testing Upload JS ===================================
 
+@app.route('/test')
+def test():
+    return thing('test.html')
+
+
+@app.route("/sendfile", methods=["POST"])
+def send_file():
+    fileob = request.files["file2upload"]
+    filename = secure_filename(fileob.filename)
+    save_path = "{}/{}".format(app.config["UPLOAD_FOLDER"], filename)
+    fileob.save(save_path)
+
+      # open and close to update the access time.
+    with open(save_path, "r") as f:
+        pass
+
+    return "successful_upload"
+
+
+@app.route("/filenames", methods=["GET"])
+def get_filenames():
+    filenames = os.listdir("video/")
+
+    #modify_time_sort = lambda f: os.stat("uploads/{}".format(f)).st_atime
+
+    def modify_time_sort(file_name):
+        file_path = "video/{}".format(file_name)
+        file_stats = os.stat(file_path)
+        last_access_time = file_stats.st_atime
+        return last_access_time
+
+    filenames = sorted(filenames, key=modify_time_sort)
+    return_dict = dict(filenames=filenames)
+    return jsonify(return_dict)
+# =====================================================
 
 # Route that will process the file upload
 @app.route('/upload', methods=['POST', 'GET'])
@@ -74,8 +110,7 @@ def compress(filename):
 
 # For a given file, return whether it's an allowed type or not
 def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
+    return '.' in filename and filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
 
 
 

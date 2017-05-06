@@ -12,8 +12,8 @@
 			var data = this.responseText; // "hello" whatever comes back from ajax
 			console.log(data);
 		}
-		xhr.open('post', 'upload.php'); //JOSE! CHANGE THIS TO PYTHON IDK HOW LOL
-		xhr.send(formData); // what data? FORMDATA!
+		xhr.open('post', '/upload'); //JOSE! CHANGE THIS TO PYTHON IDK HOW LOL
+		// xhr.send(formData); // what data? FORMDATA!
 	};
 	dropzone.ondrop = function(e) {
 		e.preventDefault();
