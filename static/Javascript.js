@@ -12,9 +12,15 @@
 			var data = this.responseText;
 			console.log(data);
 		}
+
 		xhr.open('post', 'upload.')//JOSE! CHANGE THIS TO PYTHON IDK HOW LOL
 		xhr.send(formData) // what data? FORMDATA!
 	}
+=======
+		xhr.open('post', '/upload'); //JOSE! CHANGE THIS TO PYTHON IDK HOW LOL
+		// xhr.send(formData); // what data? FORMDATA!
+	};
+
 	dropzone.ondrop = function(e) {
 		e.preventDefault();
 		this.className = 'dropzone';
