@@ -1,6 +1,16 @@
-var myDropzone = new Dropzone("div #my-dropzone", { url: "/file/post"});
-var dropzone = document.getElementById('my-dropzone');
+new Dropzone(document.getElementById("myAwesomeDropzone"), { 
+    url: "google.com", // Set the url
+    previewsContainer: "#previews",
+      addRemoveLinks: true,
+      init: function() {
+          
+      }
+    
+    
+   
+ });
 
+var dropzone = document.getElementById('myAwesomeDropzone');
 
 
 
@@ -15,7 +25,17 @@ dropzone.ondragover = function() {
 dropzone.ondragleave = function() {
      dropzone.classList.remove('drag');
      dropzone.classList.add("box1");
+   
 	var element = document.getElementById("text");
 	element.innerHTML = "Drop File anywhere.";
 	return false;
 };
+
+dropzone.ondrop = function(){ 
+    dropzone.classList.remove('drag');
+    dropzone.classList.add("box1");
+    var element = document.getElementById("text");
+	element.innerHTML = "Drop File anywhere.";
+	return false;
+};
+
