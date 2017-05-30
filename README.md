@@ -16,3 +16,6 @@ At the moment just a video Compression site using FFMPEG in the BackEnd.
 # Usage (If you want to work on it)
 ```Make sure you have virtuelenv installed (most likely through pip)```
 
+
+![](https://github.com/JoseThen/Reduce-Me-/blob/master/Reduce_How_To.gif)
+
