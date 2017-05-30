@@ -13,4 +13,6 @@ At the moment just a video Compression site using FFMPEG in the BackEnd.
 ``` pip install -r requirements.tx ```
 ``` You now can run through the app, with python reduce.py```
 
-# In Progress
+# Usage (If you want to work on it)
+```Make sure you have virtuelenv installed (most likely through pip)```
+
