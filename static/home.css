@@ -1,56 +1,47 @@
 body {
- background-image: linear-gradient(135deg, rgb(131, 99, 161) 0%, rgb(116, 168, 195) 100%);
- font-family: 'Open Sans', sans-serif;
+  background-image: linear-gradient(135deg, rgb(131, 99, 161) 0%, rgb(116, 168, 195) 100%);
+  font-family: 'Open Sans', sans-serif;
 }
 
-.box1 
-{ color: white;
-width: 50%;
- height: 97vh;
- display: flex;
-justify-content: center;
- border: dashed;
-    
+.box1 {
+  color: white;
+  width: 50%;
+  height: 97vh;
+  display: flex;
+  justify-content: center;
+  border: dashed;
 }
 
-.box2{
- width: 50%;
- height: 100vh;  
- display: flex;
- justify-content: center;
- color:white;
+.box2 {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
 
-
-.box--content{
+.box--content {
   padding-top: 30px;
   text-align: center;
-   width: 100%;
+  width: 100%;
 }
 
-
-.parent{
-display: flex;
- 
+.parent {
+  display: flex;
 }
 
-.drag{
-    
- background: rgba(0, 0, 0, 0.35);
- color: white;
- width: 50%;
- height: 100vh;
- display: flex;
-justify-content: center;
- border: dashed;
+.drag {
+  background: rgba(0, 0, 0, 0.35);
+  color: white;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  border: dashed;
 }
 
-.dropzone{
-    background: rgba(0, 0, 0, 0);
-    border: 0px; 
-    width: 100%;
-
+.dropzone {
+  background: rgba(0, 0, 0, 0);
+  border: 0px;
+  width: 100%;
 }
-
-
-
